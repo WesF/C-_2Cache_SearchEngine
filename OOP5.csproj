@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40D18439-4933-4299-A9AC-D495B975F19A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>OOP5</RootNamespace>
+    <AssemblyName>OOP5</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ExampleTest.cs" />
+    <Compile Include="IQueryCache.cs" />
+    <Compile Include="DelegateDeclarations.cs" />
+    <Compile Include="ISearchCore.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="AbstactSearchWithTwoLevelCache.cs" />
+    <Compile Include="IQueryDataSource.cs" />
+    <Compile Include="IQuery.cs" />
+    <Compile Include="ICurrentTimeProvider.cs" />
+    <Compile Include="Query.cs" />
+    <Compile Include="SearchCore.cs" />
+    <Compile Include="MyExtensions.cs" />
+    <Compile Include="SizeBoundedQueryCache.cs" />
+    <Compile Include="TimeBoundedQueryCache.cs" />
+    <Compile Include="SearchWithTwoLevelCache.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
